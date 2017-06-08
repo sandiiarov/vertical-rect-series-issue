@@ -1,0 +1,21 @@
+import 'babel-polyfill';
+import React from 'react';
+import { render } from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
+import App from './components/App';
+
+const renderApp = () => (
+  <AppContainer>
+    <App />
+  </AppContainer>
+);
+
+const root = document.getElementById('app');
+render(renderApp(), root);
+
+if (module.hot) {
+  module.hot.accept('components/App', () => {
+    require('components/App');
+    render(renderApp(), root);
+  })
+}
