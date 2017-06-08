@@ -15,8 +15,8 @@ const myData1 = [
     y: 16,
   },
   {
-    x0: new Date(2014, 0, 1).valueOf(),
-    x: new Date(2014, 1, 1).valueOf(),
+    x0: new Date(2015, 2, 1).valueOf(),
+    x: new Date(2015, 3, 1).valueOf(),
     y: 16,
   },
 ];
@@ -29,13 +29,17 @@ const myData2 = [
   },
 ];
 
+const xCoord = (data) => {
+  return data.length === 1 && [data[0].x0, data[0].x];
+};
+
 const App = () => (
   <div style={{ display: 'flex' }}>
     <XYPlot
-      width={300}
-      height={300}
-      xType="time"
+      width={600}
+      height={500}
       stackBy="y"
+      xType="time"
     >
       <VerticalGridLines />
       <HorizontalGridLines />
@@ -46,11 +50,10 @@ const App = () => (
     </XYPlot>
 
     <XYPlot
-      width={300}
-      height={300}
-      xType="time"
+      width={600}
+      height={500}
       stackBy="y"
-      xDomain={[2014, 2020]}
+      xType="time"
     >
       <VerticalGridLines />
       <HorizontalGridLines />
