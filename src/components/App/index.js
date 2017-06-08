@@ -30,7 +30,12 @@ const myData2 = [
 ];
 
 const App = () => (
-  <div style={{ display: 'flex' }}>
+  <div style={{
+    height: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  }}>
     <XYPlot
       width={600}
       height={500}
