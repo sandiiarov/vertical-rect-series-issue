@@ -365,7 +365,7 @@ export function _getScaleDistanceAndAdjustedDomain(data, scaleObject) {
   const {attr, domain} = scaleObject;
 
   let values = getUniquePropertyValues(data, attr);
-  // Fix time scale if it have only one bar.
+  // Fix time scale if a data has only one value.
   if (scaleObject.type === TIME_SCALE_TYPE && values.length === 1) {
     values = [data[0].x0, ...values];
   }

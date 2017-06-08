@@ -29,10 +29,6 @@ const myData2 = [
   },
 ];
 
-const xCoord = (data) => {
-  return data.length === 1 && [data[0].x0, data[0].x];
-};
-
 const App = () => (
   <div style={{ display: 'flex' }}>
     <XYPlot
