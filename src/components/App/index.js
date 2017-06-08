@@ -6,7 +6,7 @@ import {
   VerticalGridLines,
   HorizontalGridLines,
   VerticalRectSeries,
-} from 'react-vis';
+} from '../../vendor/react-vis/src';
 
 const myData = [
   {

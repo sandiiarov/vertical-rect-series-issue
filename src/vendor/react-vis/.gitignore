@@ -1,0 +1,13 @@
+node_modules/
+.sass-cache/
+.nyc_output/
+coverage/
+dist/
+
+/index.html
+bundle.*
+npm-debug.log*
+.DS_Store
+.idea/
+public/
+docs-dist/
